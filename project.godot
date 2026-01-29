@@ -11,13 +11,16 @@ config_version=5
 [application]
 
 config/name="SimpleAutoBattler"
-run/main_scene="uid://gpd58jkh1npb"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
-config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="SimpleAutoBattler"
+
+[editor]
+
+naming/scene_name_casing=1
+naming/script_name_casing=1
 
 [physics]
 
