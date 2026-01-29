@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cl3c2t6qf5rsi"]
+
+[node name="Arena" type="Node2D" unique_id=405586757]
+metadata/_edit_lock_ = true
