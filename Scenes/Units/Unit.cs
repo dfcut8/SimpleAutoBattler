@@ -1,8 +1,8 @@
 using Godot;
-using Resources.Units;
-using Scenes.Core;
+using SimpleAutoBattler.Resources.Units;
+using SimpleAutoBattler.Scenes.Core;
 
-namespace Scenes.Units;
+namespace SimpleAutoBattler.Scenes.Units;
 
 [Tool]
 public partial class Unit : Area2D

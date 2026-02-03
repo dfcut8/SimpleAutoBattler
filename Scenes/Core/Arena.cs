@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Scenes.Core;
+namespace SimpleAutoBattler.Scenes.Core;
 
 public partial class Arena : Node2D
 {
