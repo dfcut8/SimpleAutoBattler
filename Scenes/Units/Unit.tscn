@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://6y6a0tvyk8s6"]
+
+[ext_resource type="Texture2D" uid="uid://b8p71yo0qowxd" path="res://Assets/Textures/Rogues.png" id="1_7bw4q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bw4q"]
+size = Vector2(36, 36)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bw4q"]
+bg_color = Color(0.27815965, 0.10123766, 0.055865146, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8my3"]
+bg_color = Color(0.2006926, 0.39598534, 0.22323143, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.27815965, 0.10123766, 0.055865146, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxx5k"]
+bg_color = Color(0.27815965, 0.10123766, 0.055865146, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2dp4"]
+bg_color = Color(0.10055735, 0.3718066, 0.5057571, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.27815965, 0.10123766, 0.055865146, 1)
+
+[node name="Unit" type="Area2D" unique_id=1475403718]
+
+[node name="Skin" type="Sprite2D" parent="." unique_id=1719510897]
+position = Vector2(16, 8)
+texture = ExtResource("1_7bw4q")
+region_enabled = true
+region_rect = Rect2(32, 96, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994774598]
+position = Vector2(16, 8)
+shape = SubResource("RectangleShape2D_7bw4q")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=952873813]
+offset_left = 1.0
+offset_top = -20.0
+offset_right = 31.0
+offset_bottom = -14.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7bw4q")
+theme_override_styles/fill = SubResource("StyleBoxFlat_t8my3")
+show_percentage = false
+
+[node name="ManaBar" type="ProgressBar" parent="." unique_id=582093985]
+offset_left = 1.0
+offset_top = -15.0
+offset_right = 31.0
+offset_bottom = -11.0
+theme_override_styles/background = SubResource("StyleBoxFlat_bxx5k")
+theme_override_styles/fill = SubResource("StyleBoxFlat_f2dp4")
+show_percentage = false

@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cl3c2t6qf5rsi"]
 
+[ext_resource type="Script" uid="uid://niabas7j5nlo" path="res://Scenes/Core/Arena.cs" id="1_82cfk"]
 [ext_resource type="TileSet" uid="uid://ghd0u7lfp6y3" path="res://Resources/Tilesets/MainTileset.tres" id="1_bmppm"]
 [ext_resource type="Texture2D" uid="uid://dd85vllqeowhm" path="res://Assets/Textures/StarParticle.png" id="2_ls7dn"]
 
@@ -26,6 +27,7 @@ scale_curve = SubResource("CurveTexture_3tyvp")
 color = Color(1, 1, 1, 0.4745098)
 
 [node name="Arena" type="Node2D" unique_id=405586757]
+script = ExtResource("1_82cfk")
 metadata/_edit_lock_ = true
 
 [node name="Visuals" type="Node2D" parent="." unique_id=112473140]
