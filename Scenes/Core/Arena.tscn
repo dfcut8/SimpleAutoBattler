@@ -37,6 +37,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAYAAAAAAAEAAAAAAAYAAAAAAAIAAAAAAAY
 tile_set = ExtResource("1_bmppm")
 
 [node name="Props" type="TileMapLayer" parent="Visuals" unique_id=420711893]
+modulate = Color(1, 1, 1, 0.7019608)
 tile_map_data = PackedByteArray("AAAAAAgAAAAAABMAAAABAAkAAAAEABEAAAACAAMAAAAMABMAAAACAAYAAAAAABEAAAADAAUAAAAOABMAAAAQAAoAAAACABEAAAARAAQAAAAAABEAAAARAAYAAAAAABMAAAATAAEAAAAEABMAAAATAAcAAAAGABMAAAA=")
 tile_set = ExtResource("1_bmppm")
 
@@ -60,6 +61,7 @@ metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="GameAreaDecor" type="TileMapLayer" parent="GameArea" unique_id=1911422779]
+modulate = Color(1, 1, 1, 0.7529412)
 tile_map_data = PackedByteArray("AAACAAQAAAAAABUAAAAGAAIAAAABABYAAAACAAAAAAAAABYAAAAIAAUAAAABABUAAAA=")
 tile_set = ExtResource("1_bmppm")
 
@@ -74,5 +76,4 @@ metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="Highlight" type="TileMapLayer" parent="Bench" unique_id=861106233]
-position = Vector2(160, 32)
 tile_set = ExtResource("1_bmppm")
