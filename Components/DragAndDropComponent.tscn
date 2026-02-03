@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b3iymlsm2gml2"]
+
+[ext_resource type="Script" uid="uid://db0legv33507r" path="res://Components/DragAndDrop.cs" id="1_ca80c"]
+
+[node name="DragAndDropComponent" type="Node" unique_id=1028086166]
+script = ExtResource("1_ca80c")

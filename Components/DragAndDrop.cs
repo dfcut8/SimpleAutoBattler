@@ -38,6 +38,58 @@ public partial class DragAndDrop : Node
 
     private void OnInputEvent(Node viewport, InputEvent @event, long shapeIdx)
     {
-        throw new NotImplementedException();
+        if (Enabled == false || Target == null)
+        {
+            return;
+        }
+
+        var draggingObject = GetTree().GetFirstNodeInGroup("Dragging") as Area2D;
+        if (draggingObject != null && !isDragging)
+        {
+            return;
+        }
+
+        if (isDragging && @event.IsActionPressed("DragCancelled"))
+        {
+            CancelDrag();
+        }
+        else if (isDragging && @event.IsActionPressed("Select"))
+        {
+            StartDrag();
+        }
+        else if (!isDragging && @event.IsActionReleased("Select"))
+        {
+            DropDrag();
+        }
+    }
+
+    private void EndDrag()
+    {
+        isDragging = false;
+        Target.RemoveFromGroup("Dragging");
+        Target.ZIndex = 0;
+    }
+
+    private void CancelDrag()
+    {
+        EndDrag();
+        DragCancelled?.Invoke(startingPosition);
+        Target.GlobalPosition = startingPosition;
+    }
+
+    private void StartDrag()
+    {
+        isDragging = true;
+        startingPosition = Target.GlobalPosition;
+        dragOffset = Target.GlobalPosition - Target.GetGlobalMousePosition();
+        Target.AddToGroup("Dragging");
+        Target.ZIndex = 100;
+        DragStarted?.Invoke();
+    }
+
+    private void DropDrag()
+    {
+        EndDrag();
+        DragDropped?.Invoke(Target.GlobalPosition);
     }
 }
