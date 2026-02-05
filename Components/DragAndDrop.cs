@@ -49,12 +49,13 @@ public partial class DragAndDrop : Node
             return;
         }
 
-        if (isDragging && @event.IsActionPressed("DragCancelled"))
+        if (isDragging && @event.IsActionPressed("DragCancel"))
         {
             CancelDrag();
         }
-        else if (isDragging && @event.IsActionPressed("Select"))
+        else if (!isDragging && @event.IsActionPressed("Select"))
         {
+            GD.Print("Continuing Drag");
             StartDrag();
         }
         else if (!isDragging && @event.IsActionReleased("Select"))
