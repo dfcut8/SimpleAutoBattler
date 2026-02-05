@@ -1,5 +1,6 @@
 using System;
 using Godot;
+using SimpleAutoBattler.Scenes.Core;
 
 namespace SimpleAutoBattler.Components;
 
@@ -24,7 +25,10 @@ public partial class DragAndDrop : Node
     {
         if (isDragging && Target != null)
         {
-            Target.GlobalPosition = Target.GetGlobalMousePosition() + dragOffset;
+            // Move the target to follow the mouse, with the initial offset
+            // Snap to a cell size
+            var desired = Target.GetGlobalMousePosition() + dragOffset;
+            Target.GlobalPosition = desired.Snapped(Arena.CellSizePixels);
         }
     }
 
