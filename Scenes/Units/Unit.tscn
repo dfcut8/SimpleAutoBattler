@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b8p71yo0qowxd" path="res://Assets/Textures/Rogues.png" id="1_7bw4q"]
 [ext_resource type="Script" uid="uid://ik3lfobmlul" path="res://Scenes/Units/Unit.cs" id="1_t8my3"]
 [ext_resource type="Resource" uid="uid://bahv2flumi2d1" path="res://Resources/Units/Bjorn.tres" id="2_bxx5k"]
-[ext_resource type="PackedScene" uid="uid://b3iymlsm2gml2" path="res://Components/DragAndDropComponent.tscn" id="4_f2dp4"]
+[ext_resource type="Script" uid="uid://db0legv33507r" path="res://Components/DragAndDrop.cs" id="4_f2dp4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7bw4q"]
 size = Vector2(36, 36)
@@ -65,5 +65,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_bxx5k")
 theme_override_styles/fill = SubResource("StyleBoxFlat_f2dp4")
 show_percentage = false
 
-[node name="DragAndDropComponent" parent="." unique_id=1028086166 node_paths=PackedStringArray("Target") instance=ExtResource("4_f2dp4")]
+[node name="DragAndDrop" type="Node" parent="." unique_id=1965597671 node_paths=PackedStringArray("Target")]
+script = ExtResource("4_f2dp4")
 Target = NodePath("..")
+metadata/_custom_type_script = "uid://db0legv33507r"
