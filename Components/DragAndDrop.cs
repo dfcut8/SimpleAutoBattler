@@ -20,14 +20,6 @@ public partial class DragAndDrop : Node
     private bool isDragging = false;
     private Vector2 dragOffset;
 
-    public override void _Ready()
-    {
-        if (Target != null)
-        {
-            Target.InputEvent += OnInputEvent;
-        }
-    }
-
     public override void _Process(double delta)
     {
         if (isDragging && Target != null)
@@ -36,8 +28,9 @@ public partial class DragAndDrop : Node
         }
     }
 
-    private void OnInputEvent(Node viewport, InputEvent @event, long shapeIdx)
+    public override void _Input(InputEvent @event)
     {
+        //GD.Print($"Input Event Received in DragAndDrop. Event: {@event.AsText()}");
         if (Enabled == false || Target == null)
         {
             return;
